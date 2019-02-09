@@ -35,11 +35,11 @@ public class Main {
 			StatusUpdate sm = new StatusUpdate(msgs[i1]);
 			
 			
-			URL url = new URL(urls[i2]);
-			File file = new File("giphy.gif");
-			.copyURLToFile(url, file);
-			sm.setMedia(file);
-			tw.updateStatus(sm);
+			URL url = new URL(urls[i2]); //grab a url from the array
+			File file = new File("giphy.gif"); //create an empty file
+			.copyURLToFile(url, file); //copy the gif from the url to that file
+			sm.setMedia(file); //setMedia takes a file as a paremeter
+			tw.updateStatus(sm); //posts the media
 			
 			 
 			Thread.sleep(1000);
